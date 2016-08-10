@@ -1,0 +1,28 @@
+\mode<presentation>
+
+\definecolor{bluebg}{RGB}{82,163,217}
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \fill[color=bluebg] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \path[fill overzoom image=theme/hexagon-bg] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \node(logo) at (\the\paperwidth - 2.5cm,1cm) {\includegraphics[scale=0.2]{theme/coreos-logo}};
+  %\path[fill overzoom image=coreos-logo] (1,0) rectangle (\the\paperwidth / 4,\the\paperheight / 2);
+  %\ifnum\thepage>1\relax%
+  % \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  % \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{texsx}[1][]
+{ 
+    \begin{center}
+        \usebeamerfont{title}\inserttitle\par
+        \usebeamerfont{author}\insertauthor
+    \end{center}
+}
+
+\mode
+<all>
