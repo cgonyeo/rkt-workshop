@@ -10,6 +10,30 @@
 
 \graphicspath{ {./images/} }
 
+\newcommand{\mbold}[3]{
+    \ifnum #1=#2
+        \textbf{#3}
+    \else
+        #3
+    \fi
+}
+
+\newcommand{\outline}[1]{
+    \begin{frame}
+        Outline
+        \begin{itemize}
+            \item \mbold{#1}{1}{What are containers?}
+            \item \mbold{#1}{2}{What is rkt?}
+            \item \mbold{#1}{3}{How do I get rkt?}
+            \item \mbold{#1}{4}{How do I use rkt?}
+            \item \mbold{#1}{5}{How does rkt compare to docker?}
+            \item \mbold{#1}{6}{How does rkt work?}
+            \item \mbold{#1}{7}{How do I build rkt containers?}
+            \item \mbold{#1}{8}{How does rktnetes work?}
+        \end{itemize}
+    \end{frame}
+}
+
 \begin{document}
 
 \lstdefinestyle{log}{
@@ -20,35 +44,11 @@
     \titlepage
 \end{frame}
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+\outline{0}
 
 % Section: What are containers
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item \textbf{What are containers?}
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+\outline{1}
 
 \begin{frame}{What are containers?}
     Linux containers are a way to isolate applications. \\
@@ -84,33 +84,8 @@
 
 % Section: what is rkt
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item \textbf{What are containers?}
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item \textbf{What is rkt?}
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+\outline{1}
+\outline{2}
 
 \begin{frame}{What is rkt?}
     rkt is the piece of software that can fetch and run container images,
@@ -143,33 +118,8 @@
 
 % Section: how do I get rkt?
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item \textbf{What is rkt?}
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item \textbf{How do I get rkt?}
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+\outline{2}
+\outline{3}
 
 \begin{frame}{How do I get rkt?}
     rkt is only available on Linux, for amd64 and arm64. \\
@@ -191,33 +141,8 @@
 
 % Section: How do I use rkt?
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item \textbf{How do I get rkt?}
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item \textbf{How do I use rkt?}
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+\outline{3}
+\outline{4}
 
 \begin{frame}{How do I use rkt?}
     Let's start out with an interactive alpine container: \\
@@ -286,33 +211,8 @@
 
 % Section: how does rkt compare to docker?
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item \textbf{How do I use rkt?}
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item \textbf{How does rkt compare to docker?}
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+\outline{4}
+\outline{5}
 
 \begin{frame}{How does rkt compare to docker?}
     \begin{center}
@@ -351,33 +251,8 @@
 
 % Section: how does rkt work?
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item \textbf{How does rkt compare to docker?}
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item \textbf{How does rkt work?}
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+\outline{5}
+\outline{6}
 
 \begin{frame}{How does rkt work?}
     When a pod is run with rkt, there are three stages to this.
@@ -425,37 +300,10 @@
     \end{itemize}
 \end{frame}
 
-% Section: how does rktnetes work?
-
 % Section: how do I build rkt containers?
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item \textbf{How does rkt work?}
-        \item How do I build rkt containers?
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
-
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item \textbf{How do I build rkt containers?}
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+\outline{6}
+\outline{7}
 
 \begin{frame}{How do I build rkt containers?}
     acbuild: the App Container build system
@@ -477,33 +325,10 @@
     Example 2: nginx
 \end{frame}
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item \textbf{How do I build rkt containers?}
-        \item How does rktnetes work?
-    \end{itemize}
-\end{frame}
+% Section: how does rktnetes work?
 
-\begin{frame}
-    Outline
-    \begin{itemize}
-        \item What are containers?
-        \item What is rkt?
-        \item How do I get rkt?
-        \item How do I use rkt?
-        \item How does rkt compare to docker?
-        \item How does rkt work?
-        \item How do I build rkt containers?
-        \item \textbf{How does rktnetes work?}
-    \end{itemize}
-\end{frame}
+\outline{7}
+\outline{8}
 
 \begin{frame}{How does rktnetes work?}
     \begin{center}
