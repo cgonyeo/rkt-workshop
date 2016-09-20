@@ -6,7 +6,7 @@
 
 \title{Intro to rkt}
 \subtitle{What is rkt and how do I use it?}
-\author{Derek Gonyeo}
+\author{Derek Gonyeo \\ Josh Wood}
 
 \graphicspath{ {./images/} }
 
@@ -54,14 +54,19 @@
     Linux containers are a way to isolate applications. \\
     \vspace{1em}
     \pause
-    They're implemented with:
+    How they're implemented:
     \begin{itemize}
+        \pause
         \item The chroot syscall provides a different view of the filesystem
+        \pause
         \item pid namespaces prevent an application from seeing other processes
+        \pause
         \item network namespaces give an application a different network
             interface
+        \pause
         \item mount namespaces let an application have different mounts than
             its host
+        \pause
         \item Also UTS/IPC/cgroup/user namespaces
     \end{itemize}
 \end{frame}
@@ -73,10 +78,13 @@
     \pause
     They provide:
     \begin{itemize}
+        \pause
         \item A way to package your applications and their dependencies into an
             image.
+        \pause
         \item An easy way to share these container images between machines (via
             centralized repositories).
+        \pause
         \item A way to run your applications in an isolated and consistent
             environment.
     \end{itemize}
